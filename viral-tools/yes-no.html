@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yes No Decision Maker</title>
+<meta name="description" content="Make random yes or no decisions instantly.">
+</head>
+<body>
+<h2>Decision Maker</h2>
+
+<input id="q" placeholder="Ask question">
+<button onclick="go()">Decide</button>
+
+<h3 id="out"></h3>
+
+<script>
+function go(){
+document.getElementById('out').innerText =
+Math.random()>0.5?"YES":"NO";
+}
+</script>
+</body>
+</html>
