@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>YouTube Title Checker</title>
+<meta name="description" content="Check YouTube title length and SEO score.">
+</head>
+<body>
+<h2>YouTube Title Checker</h2>
+
+<input id="t" placeholder="Title">
+<button onclick="calc()">Check</button>
+
+<h3 id="out"></h3>
+
+<script>
+function calc(){
+let l=t.value.length;
+document.getElementById('out').innerText =
+l + " characters (ideal: 50-60)";
+}
+</script>
+</body>
+</html>
