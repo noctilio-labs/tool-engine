@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Amazon FBA Profit Calculator</title>
+<meta name="description" content="Estimate Amazon FBA profit per product instantly.">
+</head>
+<body>
+<h2>FBA Profit Calculator</h2>
+
+<input id="cost" placeholder="Product cost">
+<input id="fees" placeholder="Amazon fees">
+<input id="price" placeholder="Selling price">
+<button onclick="calc()">Calculate</button>
+
+<h3 id="out"></h3>
+
+<script>
+function calc(){
+let c=+cost.value, f=+fees.value, p=+price.value;
+document.getElementById('out').innerText =
+"Profit: $" + (p-c-f).toFixed(2);
+}
+</script>
+</body>
+</html>
