@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Compound Interest Calculator</title>
+<meta name="description" content="Calculate compound interest growth over time.">
+</head>
+<body>
+<h2>Compound Interest</h2>
+
+<input id="p" placeholder="Principal">
+<input id="r" placeholder="Rate %">
+<input id="t" placeholder="Years">
+<button onclick="calc()">Calculate</button>
+
+<h3 id="out"></h3>
+
+<script>
+function calc(){
+let p=+p.value, r=+r.value/100, t=+t.value;
+document.getElementById('out').innerText =
+"Final: $" + (p*Math.pow(1+r,t)).toFixed(2);
+}
+</script>
+</body>
+</html>
