@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Date Difference Calculator</title>
+<meta name="description" content="Calculate days between two dates instantly.">
+</head>
+<body>
+<h2>Date Difference</h2>
+
+<input id="d1" type="date">
+<input id="d2" type="date">
+<button onclick="calc()">Calculate</button>
+
+<h3 id="out"></h3>
+
+<script>
+function calc(){
+let a=new Date(d1.value), b=new Date(d2.value);
+let diff=Math.abs(b-a)/(1000*60*60*24);
+document.getElementById('out').innerText =
+diff + " days";
+}
+</script>
+</body>
+</html>
