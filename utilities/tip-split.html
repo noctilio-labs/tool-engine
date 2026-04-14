@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tip Split Calculator</title>
+<meta name="description" content="Split bills and tips instantly between people.">
+</head>
+<body>
+<h2>Tip Split Calculator</h2>
+
+<input id="bill" placeholder="Bill amount">
+<input id="tip" placeholder="Tip %">
+<input id="people" placeholder="People">
+<button onclick="calc()">Calculate</button>
+
+<h3 id="out"></h3>
+
+<script>
+function calc(){
+let b=+bill.value, t=+tip.value/100, p=+people.value;
+let total=b+(b*t);
+document.getElementById('out').innerText =
+"Each pays: $" + (total/p).toFixed(2);
+}
+</script>
+</body>
+</html>
