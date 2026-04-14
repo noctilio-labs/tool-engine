@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ROAS Calculator</title>
+<meta name="description" content="Calculate return on ad spend (ROAS).">
+</head>
+<body>
+<h2>ROAS Calculator</h2>
+
+<input id="spend" placeholder="Ad spend">
+<input id="rev" placeholder="Revenue">
+<button onclick="calc()">Calculate</button>
+
+<h3 id="out"></h3>
+
+<script>
+function calc(){
+let s=+spend.value, r=+rev.value;
+document.getElementById('out').innerText =
+"ROAS: " + (r/s).toFixed(2) + "x";
+}
+</script>
+</body>
+</html>
