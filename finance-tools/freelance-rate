@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Freelance Rate Calculator</title>
+<meta name="description" content="Calculate hourly freelance rate needed to hit income goals.">
+</head>
+<body>
+<h2>Freelance Rate Calculator</h2>
+
+<input id="income" placeholder="Yearly income goal">
+<input id="hours" placeholder="Billable hours/year">
+<button onclick="calc()">Calculate</button>
+
+<h3 id="out"></h3>
+
+<script>
+function calc(){
+let i=+income.value, h=+hours.value;
+document.getElementById('out').innerText =
+"Hourly Rate: $" + (i/h).toFixed(2);
+}
+</script>
+</body>
+</html>
