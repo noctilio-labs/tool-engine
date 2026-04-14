@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Word Counter Tool</title>
+<meta name="description" content="Count words and estimate reading time.">
+</head>
+<body>
+<h2>Word Counter</h2>
+
+<textarea id="txt"></textarea>
+<button onclick="calc()">Count</button>
+
+<h3 id="out"></h3>
+
+<script>
+function calc(){
+let w=txt.value.trim().split(/\s+/).length;
+document.getElementById('out').innerText =
+w + " words | " + Math.ceil(w/200) + " min read";
+}
+</script>
+</body>
+</html>
