@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Time Zone Converter</title>
+<meta name="description" content="Convert time between time zones instantly.">
+</head>
+<body>
+<h2>Time Zone Converter</h2>
+
+<input id="time" placeholder="Hour (0-23)">
+<button onclick="calc()">Convert to UTC</button>
+
+<h3 id="out"></h3>
+
+<script>
+function calc(){
+let t=+time.value;
+document.getElementById('out').innerText =
+"UTC Time: " + ((t+24)%24) + ":00";
+}
+</script>
+</body>
+</html>
