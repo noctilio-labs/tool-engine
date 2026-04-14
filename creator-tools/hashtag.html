@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hashtag Generator</title>
+<meta name="description" content="Generate simple hashtags from keywords.">
+</head>
+<body>
+<h2>Hashtag Generator</h2>
+
+<input id="k" placeholder="Keyword">
+<button onclick="gen()">Generate</button>
+
+<h3 id="out"></h3>
+
+<script>
+function gen(){
+let k=k.value.replace(/\s+/g,'');
+document.getElementById('out').innerText =
+"#"+k+" #trending #viral #seo";
+}
+</script>
+</body>
+</html>
