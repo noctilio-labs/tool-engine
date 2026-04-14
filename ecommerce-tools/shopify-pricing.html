@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shopify Pricing Calculator</title>
+<meta name="description" content="Set optimal Shopify product pricing instantly.">
+</head>
+<body>
+<h2>Shopify Pricing</h2>
+
+<input id="cost" placeholder="Cost">
+<input id="margin" placeholder="Margin %">
+<button onclick="calc()">Calculate</button>
+
+<h3 id="out"></h3>
+
+<script>
+function calc(){
+let c=+cost.value, m=+margin.value/100;
+document.getElementById('out').innerText =
+"Price: $" + (c/(1-m)).toFixed(2);
+}
+</script>
+</body>
+</html>
