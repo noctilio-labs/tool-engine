@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Break Even Calculator</title>
+<meta name="description" content="Find break-even units for any product instantly.">
+</head>
+<body>
+<h2>Break-Even Calculator</h2>
+
+<input id="fixed" placeholder="Fixed cost">
+<input id="cost" placeholder="Unit cost">
+<input id="price" placeholder="Selling price">
+<button onclick="calc()">Calculate</button>
+
+<h3 id="out"></h3>
+
+<script>
+function calc(){
+let f=+fixed.value, c=+cost.value, p=+price.value;
+document.getElementById('out').innerText =
+"Units needed: " + Math.ceil(f/(p-c));
+}
+</script>
+</body>
+</html>
