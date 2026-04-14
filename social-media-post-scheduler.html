@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Post Scheduler</title>
+    <meta name="description" content="Schedule your social media posts in advance with this simple tool.">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3e8e41;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Social Media Post Scheduler</h1>
+    <label for="platform">Select Social Media Platform:</label>
+    <select id="platform">
+        <option value="Facebook">Facebook</option>
+        <option value="Twitter">Twitter</option>
+        <option value="Instagram">Instagram</option>
+    </select>
+    <label for="post-time">Select Post Time:</label>
+    <input type="datetime-local" id="post-time">
+    <label for="post-content">Enter Post Content:</label>
+    <textarea id="post-content" rows="5" cols="30"></textarea>
+    <button id="schedule-btn">Schedule Post</button>
+    <div id="result"></div>
+
+    <script>
+        const scheduleBtn = document.getElementById('schedule-btn');
+        const resultDiv = document.getElementById('result');
+
+        scheduleBtn.addEventListener('click', () => {
+            const platform = document.getElementById('platform').value;
+            const postTime = document.getElementById('post-time').value;
+            const postContent = document.getElementById('post-content').value;
+
+            const scheduledPost = `Post scheduled for ${postTime} on ${platform}: ${postContent}`;
+            resultDiv.innerText = scheduledPost;
+        });
+    </script>
+</body>
+</html>
